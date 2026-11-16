@@ -1,0 +1,246 @@
+﻿/*============================================================*/
+/* Ministry Platform widgets - Diocese of Greensburg theme    */
+/* Palette taken from dioceseofgreensburg.org                 */
+/* (wp-content/themes/enterprise-pro/style.css):              */
+/*   green #0a442a / dark green #00351d                       */
+/*   navy #1b2243 / muted navy #363c57 / slate #6d7c95        */
+/*   sage #95aea3 / light sage #c8e1d6 / warm gray #edecea    */
+/*   body text #231f20 / link #085097 / link hover #073664    */
+/* Fonts: Gotham + Lato are loaded by the diocese site; the   */
+/* fallbacks apply anywhere else the widget is embedded.      */
+/*============================================================*/
+
+/*--------------------------------------------*/
+/* CSS Color Variables                        */
+/*--------------------------------------------*/
+:host {
+    --dog-green: #0a442a;
+    --dog-green-dark: #00351d;
+    --dog-navy: #1b2243;
+    --dog-navy-muted: #363c57;
+    --dog-slate: #6d7c95;
+    --dog-sage: #95aea3;
+    --dog-sage-light: #c8e1d6;
+    --dog-warm-gray: #edecea;
+    --dog-text: #231f20;
+    --dog-link: #085097;
+    --dog-link-hover: #073664;
+
+    --root-text-color: var(--dog-text);
+    --root-font-size: 16px;
+    --root-line-height: 26px;
+    --root-font-face: gothamBookRegFont, 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --root-heading-font-face: gothamMedFont, 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --primary: var(--dog-green);
+    --secondary: var(--dog-navy-muted);
+    --form-btn-primary-text: #fff;
+    --form-btn-primary-bgcolor: var(--dog-green);
+    --form-btn-primary-hover: var(--dog-green-dark);
+    --form-btn-primary-active: var(--dog-navy);
+    --form-btn-secondary-text: var(--dog-green);
+    --form-btn-secondary-bgcolor: #fff;
+    --form-btn-secondary-hover: var(--dog-warm-gray);
+    --form-btn-secondary-active: #e0deda;
+    --form-btn-disabled: #8a8f99;
+    --card-bgcolor: #fff;
+    --card-title-color: var(--dog-green);
+    --card-header-bgcolor: var(--dog-green);
+    --box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    --progress-pledged: var(--dog-green);
+    --progress-received: var(--dog-navy);
+}
+
+/*--------------------------------------------*/
+/* Card                                       */
+/*--------------------------------------------*/
+:host {
+    --card-textColor: var(--dog-text);
+    --card-borderRadius: 4px;
+    --card-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    --card-primaryColor: var(--dog-green);
+    --card-badgeBgColor: var(--dog-navy-muted);
+    --card-headerBgColor: var(--dog-green);
+    --card-badgeStatusActiveColor: var(--dog-green);
+    --card-badgeStatusPendingColor: #f0d030;
+    --card-badgeStatusDiscontinuedColor: var(--dog-warm-gray);
+    --card-badgeStatusCompleteColor: #2e7d32;
+    --card-fontSize: 16px;
+    --card-fontSizeHeader: 20px;
+    --card-lineHeight: 26px;
+    --card-progressBarColor: var(--dog-green);
+    --card-progressBarActiveColor: linear-gradient(90deg, #246c51 0%, var(--dog-green) 100%);
+    --card-progressBarRemainingColor: var(--dog-warm-gray);
+    --card-progressBarCompleteColor: #2e7d32;
+    --card-imageBgColor: var(--dog-sage);
+    --card-checkboxDefaultColor: var(--dog-navy-muted);
+    --card-labelBgColor: var(--dog-warm-gray);
+}
+
+/*--------------------------------------------*/
+/* Form                                       */
+/*--------------------------------------------*/
+:host {
+    --form-field-color: var(--dog-text);
+    --form-field-fontFamily: var(--root-font-face);
+    --form-field-margin: 8px;
+    --form-field-borderradius: 4px;
+    --form-field-padding: 20px 13px;
+    --form-field-bgcolor: #fff;
+    --form-field-bgcolor--active: #fff;
+    --form-field-border: #9a9a9a;
+    --form-field-border--active: var(--dog-green);
+    --form-field-boxshadow--active: 0 0 0 0.2rem rgba(10, 68, 42, 0.25);
+    --form-field-boxshadow--valid: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+    --form-field-boxshadow--invalid: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    --form-valid: #2e7d32;
+    --form-invalid: #c62828;
+    --form-field-disabled: var(--dog-warm-gray);
+}
+
+/*--------------------------------------------*/
+/* Inner Page Details                         */
+/*--------------------------------------------*/
+:host {
+    --innerPage-bgColor: var(--dog-warm-gray);
+    --innerPage-textColor: var(--dog-text);
+    --innerPage-fontSize: 18px;
+    --innerPage-lineHeight: 30px;
+    --innerPage-primaryColor: var(--dog-green);
+    --innerPage-boxShadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    --innerPage-borderRadius: 4px;
+    /* headers */
+    --innerPage-h1fontSize: 40px;
+    --innerPage-h1lineHeight: 52px;
+    --innerPage-h2fontSize: 28px;
+    --innerPage-h2lineHeight: 36px;
+    --innerPage-h3fontSize: 22px;
+    --innerPage-h3lineHeight: 30px;
+    --innerPage-h3color: var(--dog-green);
+    --innerPage-h4fontSize: 18px;
+    --innerPage-h4lineHeight: 26px;
+    --innerPage-dateTimeFontSize: 26px;
+    --innerPage-buttonBgColor: var(--dog-green);
+    --innerPage-buttonHoverBgColor: var(--dog-green-dark);
+    --innerPage-buttonActiveBgColor: var(--dog-navy);
+    --innerPage-progressBarColor: var(--card-progressBarColor);
+    --innerPage-progressBarActiveColor: var(--card-progressBarActiveColor);
+    --innerPage-progressBarRemainingColor: var(--card-progressBarRemainingColor);
+    --innerPage-progressBarCompleteColor: var(--card-progressBarCompleteColor);
+    --innerPage-labelBgColor: var(--dog-warm-gray);
+    --innerPage-linkColor: var(--dog-link);
+    --innerPage-linkHoverColor: var(--dog-link-hover);
+    --innerPage-linkActiveColor: var(--dog-navy);
+    --innerPage-imageBgColor: var(--dog-sage);
+    --innerPage-mapBgColor: var(--dog-warm-gray);
+}
+
+/*--------------------------------------------*/
+/* Login                                      */
+/*--------------------------------------------*/
+:host {
+    --component-bgColor: var(--dog-green);
+}
+
+/*--------------------------------------------*/
+/* COMPONENT CONTAINER                        */
+/*--------------------------------------------*/
+.mppw-component-container {
+    font-family: var(--root-font-face);
+    font-size: var(--root-font-size);
+    color: var(--root-text-color);
+    line-height: initial;
+}
+
+/*--------------------------------------------*/
+/* Wildcard Font CSS                          */
+/*--------------------------------------------*/
+* {
+    box-sizing: border-box;
+    font-family: var(--root-font-face);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--root-heading-font-face);
+    color: var(--dog-green);
+}
+
+/*--------------------------------------------*/
+/* Field labels - dark, larger, easy to read  */
+/*--------------------------------------------*/
+label,
+legend {
+    color: var(--dog-text) !important;
+    font-family: var(--root-heading-font-face);
+    font-size: 15px !important;
+    font-weight: 600;
+    line-height: 1.4;
+    opacity: 1 !important;
+}
+
+input,
+select,
+textarea {
+    color: var(--dog-text);
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #6b6b6b;
+    opacity: 1;
+}
+
+a {
+    color: var(--dog-link);
+}
+
+a:hover,
+a:focus {
+    color: var(--dog-link-hover);
+}
+
+/*--------------------------------------------*/
+/* Custom Card Builder classes                */
+/*--------------------------------------------*/
+.mpp-card--title {
+    color: var(--dog-green);
+    font-family: var(--root-heading-font-face);
+}
+
+/* Groups cards */
+.mpp-card--subtitle.group-location {
+}
+
+.mpp-card--subtitle.group-meeting-day {
+}
+
+.mpp-card--subtitle.group-start-date {
+}
+
+/* Invoice cards */
+.mpp-card--subtitle.invoice-status {
+}
+
+.mpp-card--subtitle.invoice-total {
+}
+
+.mpp-card--subtitle.invoice-date {
+}
+
+/* Opportunity cards */
+.mpp-card--subtitle.opportunity-location {
+}
+
+.mpp-card--subtitle.opportunity-start-date {
+}
+
+/* Event cards */
+.mpp-card--subtitle.event-date-range {
+}
+
+.mpp-card--subtitle.event-location {
+}
+
+.mpp-card--description {
+    color: var(--dog-text);
+}
